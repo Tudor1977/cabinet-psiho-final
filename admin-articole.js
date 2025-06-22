@@ -1,24 +1,20 @@
 
-// Importă Firebase
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
-// Config Firebase (deja introdus anterior)
 const firebaseConfig = {
-  apiKey: "AIzaSyCfbAkVeCL2k4uBlD0JvCWkHwgcE4vvOas",
-  authDomain: "site-cabinet.firebaseapp.com",
+  apiKey: "AIzaSyD9-J7aOVgqBszOkbS5xxEavYaK8FRUykU",
+  authDomain: "cabinet-psihologic-4666e.firebaseapp.com",
   projectId: "cabinet-psihologic-4666e",
   storageBucket: "cabinet-psihologic-4666e.appspot.com",
-  messagingSenderId: "1004250457061",
-  appId: "1:1004250457061:web:10b5c0f4c69d3d53f0a709"
+  messagingSenderId: "15859175356",
+  appId: "1:15859175356:web:556e3e72f299e32fc3a04c"
 };
 
-// Inițializare Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Funcția de publicare articol
-window.publicaArticol = async function () {
+window.publicaArticol = async () => {
   const titlu = document.getElementById("titlu").value;
   const continut = document.getElementById("continut").value;
   const eticheta = document.getElementById("eticheta").value;
@@ -27,14 +23,10 @@ window.publicaArticol = async function () {
 
   try {
     await addDoc(collection(db, "articole"), {
-      titlu,
-      continut,
-      eticheta,
-      imagine,
-      data
+      titlu, continut, eticheta, imagine, data
     });
     alert("Articol publicat cu succes!");
   } catch (e) {
-    alert("Eroare la publicare: " + e.message);
+    alert("Eroare la publicare: " + e);
   }
 };
