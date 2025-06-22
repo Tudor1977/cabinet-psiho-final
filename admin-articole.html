@@ -2,20 +2,17 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <title>Publică articol</title>
+  <title>Admin Articole</title>
 </head>
 <body>
   <h1>Publică un articol profesional</h1>
-  <form id="articleForm">
-    <input type="text" id="titlu" placeholder="Titlul articolului" required /><br><br>
-    <textarea id="descriere" placeholder="Paragraf scurt" rows="3" required></textarea><br><br>
-    <textarea id="continut" placeholder="Textul complet al articolului" rows="10" required></textarea><br><br>
-    <input type="text" id="eticheta" placeholder="Etichetă (ex: psihologie)" /><br><br>
-    <input type="text" id="coperta" placeholder="URL imagine copertă (opțional)" /><br><br>
-    <input type="date" id="data" required /><br><br>
+  <form id="articolForm">
+    <input type="text" placeholder="Titlul articolului" /><br />
+    <textarea placeholder="Paragraf scurt"></textarea><br />
+    <input type="text" placeholder="Etichetă (ex: psihologie)" /><br />
+    <input type="text" placeholder="URL imagine copertă (opțional)" /><br />
+    <input type="date" /><br />
     <button type="submit">Publică articol</button>
   </form>
-
-  <script type="module" src="/js/firebase-articole.js"></script>
 </body>
 </html>

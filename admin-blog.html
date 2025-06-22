@@ -1,13 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <title>Admin Blog</title>
-  <script src="firebase-config.js" defer></script>
-  <script src="main-blog.js" defer></script>
 </head>
 <body>
-  <h1>Admin Blog Funcțional</h1>
+  <h1>Publică un articol pe blog</h1>
+  <form id="blogForm">
+    <input type="text" placeholder="Titlu" /><br />
+    <input type="text" placeholder="Autor" /><br />
+    <textarea placeholder="Conținut articol"></textarea><br />
+    <input type="text" placeholder="URL imagine copertă" /><br />
+    <input type="date" /><br />
+    <button type="submit">Publică pe blog</button>
+  </form>
 </body>
 </html>
