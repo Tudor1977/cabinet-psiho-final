@@ -1,19 +1,21 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <title>Publică un articol profesional</title>
+  <title>Publică articol</title>
 </head>
 <body>
   <h1>Publică un articol profesional</h1>
-  <input id="titlu" placeholder="Titlul articolului"><br>
-  <textarea id="continut" placeholder="Paragraf scurt"></textarea><br>
-  <input id="eticheta" placeholder="Etichetă (ex: psihologie)"><br>
-  <input id="imagine" placeholder="URL imagine copertă (opțional)"><br>
-  <input type="date" id="data"><br>
-  <button onclick="publicaArticol()">Publică articol</button>
+  <form id="articleForm">
+    <input type="text" id="titlu" placeholder="Titlul articolului" required /><br><br>
+    <textarea id="descriere" placeholder="Paragraf scurt" rows="3" required></textarea><br><br>
+    <textarea id="continut" placeholder="Textul complet al articolului" rows="10" required></textarea><br><br>
+    <input type="text" id="eticheta" placeholder="Etichetă (ex: psihologie)" /><br><br>
+    <input type="text" id="coperta" placeholder="URL imagine copertă (opțional)" /><br><br>
+    <input type="date" id="data" required /><br><br>
+    <button type="submit">Publică articol</button>
+  </form>
 
-  <script type="module" src="admin-articole.js"></script>
+  <script type="module" src="/js/firebase-articole.js"></script>
 </body>
 </html>
