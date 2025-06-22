@@ -1,18 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <title>Admin Articole</title>
+  <title>Publică un articol profesional</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, textarea { display: block; margin-bottom: 10px; width: 300px; }
+    textarea#continut { height: 200px; }
+  </style>
 </head>
 <body>
   <h1>Publică un articol profesional</h1>
-  <form id="articolForm">
-    <input type="text" placeholder="Titlul articolului" /><br />
-    <textarea placeholder="Paragraf scurt"></textarea><br />
-    <input type="text" placeholder="Etichetă (ex: psihologie)" /><br />
-    <input type="text" placeholder="URL imagine copertă (opțional)" /><br />
-    <input type="date" /><br />
-    <button type="submit">Publică articol</button>
-  </form>
+  <input type="text" placeholder="Titlul articolului" id="titlu" />
+  <textarea placeholder="Paragraf scurt" id="paragraf"></textarea>
+  <input type="text" placeholder="Etichetă (ex: psihologie)" id="eticheta" />
+  <input type="text" placeholder="URL imagine copertă (opțional)" id="coperta" />
+  <input type="date" id="data" />
+  <textarea id="continut" placeholder="Scrie aici articolul complet..."></textarea>
+  <button onclick="publicaArticol()">Publică articol</button>
+
+  <script>
+    function publicaArticol() {
+      alert("Articolul a fost trimis (simulare).");
+    }
+  </script>
 </body>
 </html>
